@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./switch.css" />
+    <script src="./main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo"></div>
+      <div style="width: 70%" id="main_nav">
+        <!-- 主菜单栏 -->
+        <ul class="nav" >
+          <li
+            class="boxshadow_light"
+            onmouseover="show_iteam(1,'float1')"
+            onmouseout="show_iteam(-1,'float1')"
+          >
+            <div class="circle_decoration">
+              <div></div>
+            </div>
+            <p>iteam 1</p>
+            <div class="show_iteam boxshadow_light" id="float1">
+              <p>iteam 1 details</p>
+            </div>
+          </li>
+          <li
+            class="boxshadow_light"
+            onmouseover="show_iteam(1,'float2')"
+            onmouseout="show_iteam(-1,'float2')"
+          >
+            <div class="circle_decoration">
+              <div></div>
+            </div>
+            <p>iteam 2</p>
+            <div class="show_iteam boxshadow_light" id="float2">
+              <p>iteam 2 details</p>
+            </div>
+          </li>
+          <li
+            class="boxshadow_light"
+            onmouseover="show_iteam(1,'float3')"
+            onmouseout="show_iteam(-1,'float3')"
+          >
+            <div class="circle_decoration">
+              <div></div>
+            </div>
+            <p>iteam 3</p>
+            <div class="show_iteam boxshadow_light" id="float3">
+              <p>iteam 3 details</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- 用于login和切换 -->
+      <div class="login_nav" style="float: right">
+        <div style="margin: auto 2ch auto;">
+          <button type="button">login</button>
+        </div>
+        <!-- 用来显示不一样的css的 -->
+        <div style="display: none;" id="sec_menu">
+        <div class="A-contanier" id="A-contanier">
+            <div class="menu" onclick="show()">
+                <div class="top" id="top"></div>
+                <div class="bottom" id="bottom"></div>
+              </div>
+        
+        </div>
+    </div>
+       
+      </div>
+    </div>
+  </body>
+</html>

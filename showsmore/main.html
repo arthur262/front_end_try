@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .show:hover{
+        width: 5ch;
+        height: 5ch;
+        -webkit-animation: route 0.5s ease-in-out 1;
+        animation: route 0.5s ease-in-out 1;
+        transform: rotate(-90deg);
+      }
+      @keyframes route {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(-90deg);
+        }
+      }
+      .show{
+        width: 5ch;
+        height: 5ch;
+      }
+
+     
+      .left {
+        height: 0.5ch;
+        width: 3ch;
+        background-color: black;
+        border-radius: 0.8ch;
+        transform: rotate(45deg) translate(3ch, 0.5ch);
+      }
+      .right {
+        height: 0.5ch;
+        width: 3ch;
+        background-color: black;
+        border-radius: 0.8ch;
+        transform: rotate(-45deg) translate(-1.4ch, 1.4ch);
+      } 
+    </style>
+    <script>
+        
+    </script>
+  </head>
+  <body>
+    <div class="show">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>

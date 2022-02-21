@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./main.css" />
+    <script>
+      var count = 0;
+      function show() {
+        count = count + 1;
+        if (count % 2 == 1) {
+          document.getElementById("A-contanier").className =
+            " A-contanier A-contanier-a";
+          document.getElementById("top").className = " top top-a ";
+          document.getElementById("bottom").className = " bottom bottom-a ";
+          setTimeout(function(){
+            document.getElementById("A-contanier").className =
+            " A-contanier";
+          document.getElementById("top").className = "top-a-s ";
+          document.getElementById("bottom").className = "bottom-a-s ";
+          },"1000");
+        } else {
+          document.getElementById("A-contanier").className = "  A-contanier-b A-contanier";
+          document.getElementById("top").className = "  top-b top-a-s";
+          document.getElementById("bottom").className = "  bottom-b bottom-a-s";
+          count = 0;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="A-contanier-abs">
+      <div class="A-contanier" id="A-contanier">
+        <div class="menu" onclick="show()">
+          <div class="top" id="top"></div>
+          <div class="bottom" id="bottom"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

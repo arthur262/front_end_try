@@ -1,0 +1,101 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display:flex;
+    width: 100%;
+    height:7ch;
+    background-color:whitesmoke ;
+    box-shadow:0px 2px 7px 1px rgba(0,0,0,0.1)
+}
+p{
+  overflow: hidden;
+  white-space: nowrap;
+}
+.nav ,.login_nav{
+    list-style: none;
+    display: flex;
+    padding: 1ch;
+  }
+  .nav li {
+    margin: 0 1ch 0;
+    min-width: 4ch;
+    min-height: 2ch;
+    padding: 1ch 1ch 1ch;
+    line-height: 3ch;
+    text-align: center;
+    border-radius: 1.5ch;
+    background-color: white;
+    display: flex;
+  }
+.login_nav button{
+    margin: 0 1ch 0;
+    min-width: 4ch;
+    min-height: 2ch;
+    line-height: 3ch;
+    text-align: center;
+    border-radius: 1ch;
+    border:0;
+    background-color: rgba(134,150,167,0.6);
+    display: flex;
+    padding:1ch 2ch 1ch;
+}
+
+/* 悬停菜单*/
+  .show_iteam {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    min-width: 20ch;
+    min-height: 20ch;
+    border: 2px solid rgba(134,150,167,0.6);
+    border-radius: 1.5ch;
+    background-color: whitesmoke;
+  }
+  
+  .show_iteam_transition {
+    transform: translate(-5ch, 5ch);
+    animation: drawdown 1s ease;
+  }
+
+.logo {
+    background-image: url("http://arthur1.oss-us-west-1.aliyuncs.com/self-web/image/mmexport1640288180459.png");
+    width: 56px;
+    height: 56px;
+    background-size: cover;
+    margin: auto 2ch auto;
+    border-radius: 1ch;
+    margin-left: 5%;
+}
+/* 用于装饰的小环*/
+.circle_decoration{
+    height:20px;
+    width:20px;
+    border-radius:50%;
+    margin:auto 5px auto;
+    background-color: grey;
+}
+.circle_decoration div{
+    height:12px;
+    width:12px;
+    border-radius:50%;
+    margin: 20% auto ;
+    background-color:white;
+}
+/* 阴影*/
+.boxshadow_light{
+    box-shadow:2px 2px 5px 1px rgba(0,0,0,0.2);
+}
+  /* 下拉菜单 动画*/
+  @keyframes drawdown {
+    from {
+        transform: translate(-5ch, 0ch);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-5ch, 5ch);
+      opacity: 1;
+    }
+  }

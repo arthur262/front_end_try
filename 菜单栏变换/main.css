@@ -1,0 +1,204 @@
+.top {
+  width: 70%;
+  height: 7px;
+  margin-left: 10%;
+  background-color: black;
+  border-radius: 1ch;
+  margin-top: 10%;
+}
+.bottom {
+  width: 90%;
+  height: 6px;
+  margin-left: 10%;
+  background-color: black;
+  border-radius: 1ch;
+  margin-top: 40%;
+}
+.A-contanier {
+  display: relative;
+  border-radius: 1.5ch;
+  padding: 1ch;
+  height: 40px;
+  width: 40px;
+}
+.A-contanier-abs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+/* normal order animation*/
+.top-a {
+  
+  background-color: black;
+  border-radius: 1ch;
+
+  animation: menu-top-a 1s ease-in-out 1;
+  -webkit-animation: menu-top-a 1s ease-in-out;
+  width: 120%;
+  height: 6px;
+  transform: rotate(45deg) translate(1px, 12px);
+}
+@keyframes menu-top-a {
+  0% {
+    width: 70%;
+  height: 7px;
+    transform: rotate(0);
+  }
+  100% {
+    width: 120%;
+    height: 6px;
+  transform: rotate(45deg) translate(1px, 12px);
+  }
+}
+
+.bottom-a {
+  animation-direction: normal;
+  background-color: black;
+  border-radius: 1ch;
+  
+  animation: menu-bottom-a 1s ease-in-out 1;
+  -webkit-animation: menu-bottom-a 1s ease-in-out;
+  width: 120%;
+  height: 6px;
+  transform: rotate(-45deg) translate(3px, -12px);
+}
+@keyframes menu-bottom-a {
+  0% {
+    width: 90%;
+  height: 6px;
+    transform: rotate(0);
+  }
+  100% {
+    width: 120%;
+    height: 6px;
+  transform: rotate(-45deg) translate(3px, -12px);
+  }
+}
+
+.A-contanier-a {
+  animation-direction: normal;
+  
+  -webkit-animation: flip-a 1s ease-in-out 1;
+  animation: flip-a 1s ease-in-out 1;
+  
+  transform: rotate(-180deg);
+}
+@keyframes flip-a {
+  0% {
+
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+
+/* 用来保存翻转之后的形状*/
+
+ .top-a-s {
+  background-color: black;
+  border-radius: 1ch;
+  width: 120%;
+  height: 6px;
+  transform: rotate(45deg) translate(10px, 13px);
+  animation: menu-top-a 1s ease-in-out 1;
+  -webkit-animation: menu-top-a 1s ease-in-out;
+}
+.bottom-a-s {
+  background-color: black;
+  border-radius: 1ch;
+  animation-direction: normal;
+  transform: rotate(-45deg) translate(-10px, 7px);
+  width: 120%;
+  height: 6px;
+  animation: menu-bottom-a 1s ease-in-out 1;
+  -webkit-animation: menu-bottom-a 1s ease-in-out;
+} 
+
+
+
+/* flip order animation*/
+.top-b {
+  animation-direction: normal;
+  width: 70%;
+  height: 7px;
+  margin-left: 10%;
+  background-color: black;
+  border-radius: 1ch;
+  margin-top: 10%;
+    transform: rotate(0deg) translate(0ch, 0ch);
+  animation: menu-top-b 1s ease-in-out 1;
+  -webkit-animation: menu-top-b 1s ease-in-out;
+}
+@keyframes menu-top-b {
+  0% {
+    width: 120%;
+  height: 6px;
+  transform: rotate(45deg) translate(10px, 13px);
+  }
+  100% {
+    width: 70%;
+  height: 7px;
+  margin-left: 10%;
+  background-color: black;
+  border-radius: 1ch;
+  margin-top: 10%;
+    transform: rotate(0deg) translate(0ch, 0ch);
+  }
+}
+
+.bottom-b {
+  animation-direction: normal;
+  width: 90%;
+  height: 6px;
+  margin-left: 10%;
+  background-color: black;
+  border-radius: 1ch;
+  margin-top: 40%;
+  transform: rotate(0deg) translate(0ch, 0ch);
+  animation: menu-bottom-b 1s ease-in-out 1;
+  -webkit-animation: menu-bottom-b 1s ease-in-out;
+}
+@keyframes menu-bottom-b {
+  0% {
+    width: 120%;
+    height: 6px;
+    transform: rotate(-45deg) translate(3px, -12px);
+    
+  }
+  100% {
+    width: 90%;
+  height: 6px;
+  margin-left: 10%;
+  background-color: black;
+  border-radius: 1ch;
+  margin-top: 40%;
+    transform: rotate(0deg) translate(0ch, 0ch);
+    
+  }
+}
+
+.A-contanier-b {
+  animation-direction: normal;
+  animation: flip-b 1s ease-in-out 1;
+  -webkit-animation: flip-b 1s ease-in-out 1;
+  transform: rotate(0deg);
+
+}
+@keyframes flip-b {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
