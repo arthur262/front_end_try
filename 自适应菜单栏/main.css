@@ -5,10 +5,11 @@
 }
 .container {
     display:flex;
-    width: 100%;
+    width: fit-content;
+    margin: 0 auto;
     height:7ch;
     background-color:whitesmoke ;
-    box-shadow:0px 2px 7px 1px rgba(0,0,0,0.1)
+    
 }
 p{
   overflow: hidden;
@@ -18,6 +19,8 @@ p{
     list-style: none;
     display: flex;
     padding: 1ch;
+    margin: auto 2% auto;
+    transition-duration: .8s;
   }
   .nav li {
     margin: 0 1ch 0;
@@ -56,18 +59,21 @@ p{
   }
   
   .show_iteam_transition {
+    display:block;
+    transition: display 1s ;
     transform: translate(-5ch, 5ch);
     animation: drawdown 1s ease;
   }
 
-.logo {
+#logo {
     background-image: url("http://arthur1.oss-us-west-1.aliyuncs.com/self-web/image/mmexport1640288180459.png");
-    width: 56px;
-    height: 56px;
-    background-size: cover;
-    margin: auto 2ch auto;
+    min-width: 60px;
+    min-height: 60px;
+    background-size: 100% 100%;
+    margin: auto  5% auto  auto;
+    transition: translateX(0px);
+    transition-duration: .8s;
     border-radius: 1ch;
-    margin-left: 5%;
 }
 /* 用于装饰的小环*/
 .circle_decoration{
@@ -76,14 +82,32 @@ p{
     border-radius:50%;
     margin:auto 5px auto;
     background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .circle_decoration div{
     height:12px;
     width:12px;
     border-radius:50%;
-    margin: 20% auto ;
     background-color:white;
 }
+.circle:hover .circle_decoration{
+  position:relative;
+  transition-duration: .5s;
+  width:28px;
+  height:28px;
+
+}
+.circle:hover .circle_decoration div{
+  position:relative;
+  transition-duration: .5s;
+  width:15px;
+  height:15px;
+}
+
+
 /* 阴影*/
 .boxshadow_light{
     box-shadow:2px 2px 5px 1px rgba(0,0,0,0.2);
@@ -98,4 +122,13 @@ p{
       transform: translate(-5ch, 5ch);
       opacity: 1;
     }
+  }
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+    
   }

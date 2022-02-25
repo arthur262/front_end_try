@@ -10,13 +10,14 @@
     <script src="./main.js"></script>
   </head>
   <body>
+    <div style="background-color: whitesmoke;width:100%;box-shadow:0px 2px 7px 1px rgba(0,0,0,0.1);">
     <div class="container">
-      <div class="logo"></div>
+      <div id="logo"></div>
       <div style="width: 70%" id="main_nav">
         <!-- 主菜单栏 -->
         <ul class="nav" >
           <li
-            class="boxshadow_light"
+            class="boxshadow_light circle"
             onmouseover="show_iteam(1,'float1')"
             onmouseout="show_iteam(-1,'float1')"
           >
@@ -29,7 +30,7 @@
             </div>
           </li>
           <li
-            class="boxshadow_light"
+            class="boxshadow_light circle"
             onmouseover="show_iteam(1,'float2')"
             onmouseout="show_iteam(-1,'float2')"
           >
@@ -42,7 +43,7 @@
             </div>
           </li>
           <li
-            class="boxshadow_light"
+            class="boxshadow_light circle"
             onmouseover="show_iteam(1,'float3')"
             onmouseout="show_iteam(-1,'float3')"
           >
@@ -74,5 +75,6 @@
        
       </div>
     </div>
+  </div>
   </body>
 </html>
