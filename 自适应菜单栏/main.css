@@ -128,14 +128,13 @@ p{
   background-color:whitesmoke;
   transition-duration: .8s;
   display:none;
-  animation:transfer 1.5s ease-in-out;
   padding: 4ch;
+}
+.side-in{
+  animation:transfer 1.5s ease-in-out;
 }
 .side-out{
   animation:transfer_out 1.5s ease-in-out;
-}
-.side-out ::after{
-  transform:translate(100%);
 }
 @keyframes transfer_out{
   from{
@@ -147,7 +146,7 @@ p{
 }
 @keyframes transfer{
   from{
-    transform:translate(50%);
+    transform:translate(100%);
   }
   to{
     transform:translate(0%);
@@ -186,13 +185,4 @@ p{
       transform: translate(-5ch, 5ch);
       opacity: 1;
     }
-  }
-  @keyframes fade-out {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-    
   }

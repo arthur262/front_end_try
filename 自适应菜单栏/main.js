@@ -51,12 +51,14 @@ function show() {
       " A-contanier A-contanier-a";
     document.getElementById("top").className = " top top-a ";
     document.getElementById("bottom").className = " bottom bottom-a ";
+    side.style.display = "block";
+    side.className = "side side-in";
     setTimeout(function () {
       document.getElementById("A-contanier").className = " A-contanier";
       document.getElementById("top").className = "top-a-s ";
       document.getElementById("bottom").className = "bottom-a-s ";
     }, "1000");
-    side.style.display = "block";
+    
   } else {
     //close
     document.getElementById("A-contanier").className =
@@ -65,7 +67,6 @@ function show() {
     document.getElementById("bottom").className = "  bottom-b bottom-a-s";
     count = 0;
     side.className = "side side-out";
-
     setTimeout(function () {
       side.style.display = "none";
     }, 1500);
